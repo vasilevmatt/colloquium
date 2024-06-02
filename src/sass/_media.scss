@@ -1,0 +1,18 @@
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 320px;
+
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content
+        }
+    }
+}

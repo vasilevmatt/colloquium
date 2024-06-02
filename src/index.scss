@@ -2,8 +2,11 @@
 
 @import 'sass/fonts';
 @import 'sass/variables';
+@import 'sass/mixins';
+@import 'sass/media';
 
 @import 'sass/globals';
 
 @import 'sass/blocks/header'; 
+@import 'sass/blocks/links-line';
 @import 'sass/blocks/article';
