@@ -1,0 +1,96 @@
+body {
+    background-color: $color-background;
+    user-select: none;
+    font-family: 'TT Lakes', sans-serif
+}
+
+.page {
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 14px;
+    background-color: var($color-background);
+    color: var($color-gray);
+    overflow: hidden;
+}
+.main {
+    background-color: $color-background;
+
+}
+
+.main__heading {
+    font-size: 28px;
+    padding-left: 16px;
+    padding-top: 24px;
+}
+
+.main__heading::before {
+    content: url(assets/global/icons/highlight.svg); 
+    width: 4px;
+    height: 40px;
+    position: absolute;
+    top: 112px;
+    left: 0;
+}
+
+.continue-link {
+    display: flex;
+    column-gap: 16px;
+    font-weight: 500;
+    color: $color-dark;
+    text-decoration: none;
+    margin-left: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.links-list {
+    display: flex;
+    column-gap: 10px;
+    margin-left: 16px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    font-weight: 500;
+    overflow: auto;
+}
+
+.links-list:before {
+    content: "";
+    position: absolute;
+    top: 176px;
+    left: 92.5vw;
+    height: 40px;
+    width: 7.5vw;
+    background-image: -webkit-linear-gradient(to right, rgba(52, 73, 94, 0), #F8F8F8);
+    background-image: linear-gradient(to right, rgba(52, 73, 94, 0), #F8F8F8);
+}
+
+.links-list__link {
+    display: flex;
+    align-items: center;
+    color: $color-gray;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 6px 12px 6px 16px;
+    font-size: 16px;
+    user-select: none;
+}
+
+.links-list__item {
+    display: flex;
+}
+
+.links-list__link:hover {
+    color: #68686c;
+    transition-duration: $transition-duration;
+}
+
+.links-list__item--is-active {
+    border: $border;
+    background-color: white;
+    border-radius: $border-radius;
+}
+
+.links-list__link--is-active {
+    cursor: default;
+}
