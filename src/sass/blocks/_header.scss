@@ -57,12 +57,16 @@
     background-color: $color-pink;
     display: block;
     border: none;
-    margin: 23px clamp(7px, 2.45vw, 8px);
     width: 40px;
     height: 40px;
     border-radius: 50%;
 
 }
+
+.header__button, .header__burger {
+    margin: 23px clamp(7px, 2.45vw, 8px);
+}
+
 .button-figure {
    display: flex;
    justify-content: center;
