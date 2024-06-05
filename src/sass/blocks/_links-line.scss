@@ -22,7 +22,7 @@
 .links-list__link {
     display: flex;
     align-items: center;
-    color: $color-gray;
+    color: var(--color-gray);
     text-decoration: none;
     white-space: nowrap;
     padding: 6px 12px 6px 16px;
@@ -36,13 +36,13 @@
 
 .links-list__link:hover {
     color: #68686c;
-    transition-duration: $transition-duration;
+    transition-duration: var(--transition-duration);
 }
 
 .links-list__item--is-active {
-    border: $border;
+    border: var(--border);
     background-color: white;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
 }
 
 .links-list__link--is-active {

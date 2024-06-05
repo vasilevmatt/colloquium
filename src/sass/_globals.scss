@@ -3,12 +3,12 @@
     font-weight: 300;
     line-height: 1.5;
     font-size: 14px;
-    background-color: var($color-background);
-    color: var($color-gray);
-    overflow: hidden;
+    background-color: var(--color-background);
+    color: var(--color-gray);
+    overflow-x: hidden;
 }
 .main {
-    background-color: $color-background;
+    background-color: var(--color-background);
 
 }
 
@@ -31,7 +31,7 @@
     display: flex;
     column-gap: 16px;
     font-weight: 500;
-    color: $color-dark;
+    color: var(--color-dark);
     text-decoration: none;
     margin-left: 24px;
     margin-top: 16px;

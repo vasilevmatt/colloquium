@@ -5,8 +5,8 @@
     font-weight: 300;
     line-height: 1.5;
     font-size: 14px;
-    background-color: $color-background;
-    color: $color-dark;
+    background-color: var(--color-background);
+    color: var(--color-dark);
 }
 
 
@@ -54,7 +54,7 @@
 
 .button,
 .header__burger {
-    background-color: $color-pink;
+    background-color: var(--color-pink);
     display: block;
     border: none;
     width: 40px;
@@ -81,7 +81,7 @@
 button:hover,
 .header__burger:hover {
     opacity: 0.9;
-    transition-duration: $transition-duration;
+    transition-duration: var(--transition-duration);
 }
 
 .header__logo {

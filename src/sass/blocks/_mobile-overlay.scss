@@ -22,7 +22,7 @@
 
 .menu-overlay-container {
     width: clamp(320px, 100vw, 360px);
-    height: clamp(676px, 100vh, 1000px);
+    height: clamp(676px, 100vh, 100.01vh);
     display: flex;
     background-color: var(--color-menu-background);
     flex-direction: column;
