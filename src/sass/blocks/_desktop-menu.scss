@@ -1,3 +1,13 @@
+.menu-bar {
+    display: none;
+    
+        @media (min-width: $desktop) {
+            display: block;
+            background-color: var(--color-menu-background);
+        }
+    }
+
+
 
 .mobile-overlay {
 
@@ -20,15 +30,14 @@
     }
 }
 
-.menu-overlay-container {
-    width: clamp(320px, 100vw, 360px);
-    height: clamp(676px, 100vh, 100.01vh);
+.menu-desktop-container {
+    width: 320px;
+    height: clamp(676px, 100vh, 965px);
     display: flex;
     background-color: var(--color-menu-background);
     flex-direction: column;
-    box-shadow: var(--box-shadow);
     justify-content: space-between;
-    padding: 24px;
+    padding: 30px 30px 0 24px;
     row-gap: 30px;
 }
 
@@ -50,36 +59,8 @@
     row-gap: 4.49vh;
 }
 
-.button {
-    background-color: var(--color-pink);
-    display: block;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.button-figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.button__image {
-    max-width: 20px;
-    max-height: 20px;
-}
-
-button:hover {
-    opacity: 0.9;
-    transition-duration: var(--transition-duration);
-}
-
-.header__overlay-logo {
-    margin-left: 42px;
-    margin-top: -6px;
+.desktop-menu__header-logo {
+margin: 0;
 }
 
 .main {
@@ -96,11 +77,11 @@ button:hover {
     margin-top: -10px;
 }
 
-.links-overlay-list__item {
+.links-desktop-list__item {
     margin: clamp(15px, 3.12vh, 32px) 0;
 }
 
-.links-overlay-list__link, .languages-list__link {
+.links-desktop-list__link, .languages-list__link {
     text-decoration: none;
     color: var(--color-dark);
     font-size: 16px;

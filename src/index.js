@@ -200,3 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 })
+
+
+
+
+/* when menu is opened */
+document.querySelector("#open-menu-button").addEventListener('click', function() {
+    document.querySelector("body").style.overflow = 'hidden';
+});
+
+/* when menu is closed */
+document.querySelector("#close-menu-button").addEventListener('click', function() {
+    document.querySelector("body").style.overflow = 'visible';
+});

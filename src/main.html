@@ -10,13 +10,87 @@
 </head>
 
 <body class="page">
+    <aside class="menu-bar">
+        <div class="menu-desktop__body">
+            <div class="menu-desktop-container">
+                <div class="menu-upper-part">
+                    <div class="menu-header">
+                        <div class="logo-burger-side">
+                            <a href="#" class="desktop-menu__header-logo logo"><img
+                                    src="assets/blocks/header/icons/logo.svg" alt="CPS Logo" width="97"
+                                    height="51" /></a>
+                        </div>
+                        <button class="menu-header__button button">
+                            <div class="button-figure"><img class="button__image"
+                                    src="assets/blocks/header/icons/search.svg" alt="" />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="menu-list">
+                        <ul class="links-desktop-list">
+                            <li class="links-desktop-list__item"><a href="#"
+                                    class="links-overlay-list__link links-overlay-list__link--is-active">Ремонт
+                                    техники</a></li>
+                            <li class="links-overlay-list__item"><a href="#" class="links-overlay-list__link">Услуги
+                                    и сервисы</a></li>
+                            <li class="links-overlay-list__item"><a href="#"
+                                    class="links-overlay-list__link">Корпоративным клиентам</a>
+                            </li>
+                            <li class="links-overlay-list__item"><a href="#"
+                                    class="links-overlay-list__link">Продавцам техники</a></li>
+                            <li class="links-overlay-list__item"><a href="#"
+                                    class="links-overlay-list__link">Партнерам</a></li>
+                            <li class="links-overlay-list__item"><a href="#"
+                                    class="links-overlay-list__link">Производителям</a></li>
+                            <li class="links-overlay-list__item"><a href="#" class="links-overlay-list__link">Наши
+                                    сервисные центры</a>
+                            </li>
+                            <li class="links-overlay-list__item"><a href="#"
+                                    class="links-overlay-list__link">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-overlay-footer">
+                    <div class="menu-overlay-footer-buttons">
+                        <button class="menu-header__button button">
+                            <div class="button-figure"><img class="button__image"
+                                    src="assets/blocks/header/icons/call.svg" alt="" />
+                            </div>
+                        </button>
+                        <button class="menu-header__button button">
+                            <div class="button-figure"><img class="button__image"
+                                    src="assets/blocks/header/icons/chat.svg" alt="" />
+                            </div>
+                        </button>
+                        <button class="menu-header__button button">
+                            <div class="button-figure"><img class="button__image"
+                                    src="assets/blocks/header/icons/profile.svg" alt="" /></div>
+                        </button>
+                    </div>
+                    <div class="menu-overlay-footer-contacts">
+                        <p class="menu-overlay-container__email">mail@cps.com</p>
+                        <p class="menu-overlay-container__phone">8 800 890 8900</p>
+                    </div>
+                    <div class="menu-overlay-footer-languages">
+                        <ul class="languages-list">
+                            <li class="languages-list__item languages-list__item--is-active"><a href=""
+                                    class="languages-list__link languages-list__link--is-active">RU</a></li>
+                            <li class="languages-list__item"><a href="" class="languages-list__link">EN</a></li>
+                            <li class="languages-list__item"><a href="" class="languages-list__link">CH</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="landing-page">
     <header class="header">
         <h1 class="visually-hidden">CPS Сервис-центр</h1>
         <nav class="header-menu">
             <div class="header-menu__inner">
                 <div class="header-menu__left">
                     <button type="button" class="header__burger burger-button header__button button" title="Open menu"
-                        onclick="mobileOverlay.showModal()">
+                        onclick="mobileOverlay.showModal()" id="open-menu-button">
                         <span class="visually-hidden">Open menu</span>
                         <div class="button-figure">
                             <img class="button__image" src="assets/blocks/header/icons/burger.svg" alt="" />
@@ -269,6 +343,7 @@
    
    
     </main>
+</div>
 
     <dialog class="mobile-overlay" id="mobileOverlay">
             <div class="mobile-overlay__body">
@@ -277,7 +352,7 @@
                         <div class="menu-header">
                             <div class="logo-burger-side">
                                 <form action="" class="mobile-overlay__close-button-wrapper" method="dialog">
-                                <button class="mobile-overlay__close-button menu-header__button button" type="submit">
+                                <button class="mobile-overlay__close-button menu-header__button button" type="submit" id="close-menu-button">
                                     <div class="button-figure"><img class="button__image"
                                             src="assets/blocks/header/icons/cancel.svg" alt="" />
                                     </div>

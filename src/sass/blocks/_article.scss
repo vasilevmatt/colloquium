@@ -29,23 +29,10 @@
     height: 176px;
 }
 
-.button__text {
-    display: none;
-}
 
 
 
 
-
-
-
-
-
-@media (min-width: 401px) {
-    .header-menu__right::before {
-        width: 0;
-    }
-}
 
 @media (min-width: 501px) {
     .article__text:last-child {
@@ -54,30 +41,6 @@
 }
 
 @media (min-width: 701px) {
-
-    .header-menu__left {
-        margin-left: 16px;
-    }
-
-    .header__burger {
-        margin-right: 21px;
-    }
-
-    .header__logo {
-        margin-left: 21px;
-    }
-
-    .header__logo::before {
-        content: "";
-        display: block;
-        width: 2px;
-        height: 32px;
-        background-color: #EAEAEA;
-        border-radius: 1px;
-        position: absolute;
-        top: 28px;
-        left: 84px;
-    }
 
     .article-container {
         flex-direction: row;
@@ -125,63 +88,9 @@
         height: 208px;
     }
 
-    .header-menu-buttons {
-        display: flex;
-    }
-
-    .header-menu__tablet-view {
-        display: flex;
-        margin-right: 22px;
-    }
-
-    .header-menu__right::before {
-        width: 2px;
-    }
 }
 
-@media (min-width: 1120px) {
-    .header {
-        visibility: hidden;
-    }
-
-    .header-menu__inner {
-        justify-content: space-between;
-        position: absolute;
-        width: 100vw;
-    }
-
-    .button__text {
-        display: block;
-        white-space: nowrap;
-    }
-
-  .button-container {
-   display: flex;
-   column-gap: 8px;
-   align-items: center;
-   margin-top: 34px;
-   margin-left: 32px;
-  }
-
-    .header-menu__right {
-        visibility: visible;
-        display: flex;
-        flex-wrap: nowrap;
-        margin-right: 2.85vw;
-    }
-
-    .header-menu__right::before {
-        width: 0;
-    }
-
-    .header__button {
-        display: flex;
-        column-gap: 8px;
-        align-items: center;
-        margin-top: 34px;
-        justify-content: center;
-        margin: 8px 0;
-    }
+@media (min-width: $desktop) {
 
     .links-list {
         flex-wrap: wrap;
@@ -192,6 +101,7 @@
     .main__heading::before {
         width: 3px;
         top: 42px;
+        left: 320px
     }
 
     .main__heading {

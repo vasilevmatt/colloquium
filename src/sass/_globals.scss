@@ -6,6 +6,9 @@
     background-color: var(--color-background);
     color: var(--color-gray);
     overflow-x: hidden;
+    @media (min-width: $desktop) {
+    display: flex;
+    }
 }
 .main {
     background-color: var(--color-background);
@@ -36,4 +39,10 @@
     margin-left: 24px;
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+.landing-page {
+    @media (min-width: $desktop) {
+        flex: 1
+    }
 }
