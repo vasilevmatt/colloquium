@@ -205,6 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     if (width < 768) {
+        let HiddenPriceListHeader = document.querySelector('.price-slide--desktop-table-header')
+        HiddenPriceListHeader.classList.add('visually-hidden')
+        HiddenPriceListHeader.classList.remove('price-slide')
         new Swiper('.price-list', {
             slideClass: 'price-slide',
             wrapperClass: 'price-list__swiper-wrapper',

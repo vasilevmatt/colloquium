@@ -43,7 +43,8 @@
 
 .landing-page {
     @media (min-width: $desktop) {
-        flex: 1
+        flex: 1;
+        width: 78vw;
     }
 }
 
@@ -70,6 +71,10 @@
   .swiper-container, .swiper-second__container, .price-list__swiper-wrapper {
     margin-left: 16px;
     overflow: hidden;
+
+    @media (min-width: $tablet) {
+      margin-left: 24px;
+    }
   }
 
   .swiper-second__header, .price-list__header, .header-swiper {

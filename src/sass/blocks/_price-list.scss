@@ -9,14 +9,52 @@
   &__desktop-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
+    margin-left: 24px;
+    margin-bottom: 24px;
+
   }
 
   &__header {
     height: 55px;
   }
+
+  &__info {
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: $mobile) {
+        width: 85.65vw;
+        
+    }
+    @media (min-width: $tablet) {
+        margin-left: 24px;
+        width: 55vw;
+    }
+    @media (min-width: $desktop) {
+        width: 30vw;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: row;
+
+    @include reset-link;
+    margin-left: 16px;
+
+    @include hover {
+        opacity: 0.8;
+    }
+
+    @media (min-width: $tablet) {
+        margin-left: 24px;
+    }
+
+
+  }
+
 }
+
 
 .price-slide {
   display: flex;
@@ -32,6 +70,7 @@
   padding: 16px;
   max-height: 1300vh;
 
+
   &--desktop {
     min-width: 93.75vw;
     min-height: 65px;
@@ -39,7 +78,14 @@
     border-radius: 0;
     position: relative;
 
-    &::after {
+    @media (min-width: $desktop) {
+        min-width: 73.34vw;
+    }
+
+    
+
+
+    &:not(:last-child):not(:first-child)::after {
       content: '';
       width: 89.5vw;
       height: 1px;
@@ -51,7 +97,21 @@
       left: 0;
       right: 0;
       text-align: center;
+
+      @media (min-width: $desktop) {
+        width: 70vw;
+      }
     }
+  }
+
+  &--desktop-table-header {
+    background-color: transparent;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    align-items: end;
   }
 
   &-wrapper {
@@ -60,15 +120,20 @@
     position: relative;
 
     &--desktop {
-      min-width: 93.75vw;
+      width: 93.75vw;
       display: grid;
       grid-template-columns: 45.6vw 9.75vw 10.42vw 15.6vw;
-      grid-template-rows: 1fr;
       column-gap: 3.125vw;
+
+      @media (min-width: $desktop) {
+        width: 73.34vw;
+        grid-template-columns: 26.3vw 7.21vw 6.625vw 8.35vw;
+        column-gap: 7.34vw;
+      }
     }
   }
 
-  &__category {
+  &__category, .price-list__table-header {
     color: var(--color-gray);
 
     &--invisible {
@@ -110,6 +175,7 @@
 
     &--desktop-view {
       position: static;
+      justify-self: center;
     }
 
     display: flex;
@@ -124,6 +190,15 @@
       font-weight: 700;
       color: white;
     }
+  }
+
+  &:nth-of-type(2) {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  &:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
 }
 
@@ -141,4 +216,8 @@
   );
   background-image: linear-gradient(to right, rgba(52, 73, 94, 0), #f8f8f8);
   z-index: 10;
+}
+
+.contact-text {
+    margin-right: 8px;
 }
