@@ -1,5 +1,10 @@
 .price-list {
   position: relative;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
 
   &__swiper-wrapper {
     display: flex;
@@ -36,7 +41,7 @@
   }
 
   &__contact {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
 
     @include reset-link;
