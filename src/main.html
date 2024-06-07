@@ -52,12 +52,12 @@
                 </div>
                 <div class="menu-overlay-footer">
                     <div class="menu-overlay-footer-buttons">
-                        <button class="menu-header__button button">
+                        <button class="menu-header__button button" onclick="contactOverlay.showModal()" id="open-menu-button">
                             <div class="button-figure"><img class="button__image"
                                     src="assets/blocks/header/icons/call.svg" alt="" />
                             </div>
                         </button>
-                        <button class="menu-header__button button">
+                        <button class="menu-header__button button" onclick="feedbackOverlay.showModal()" id="open-menu-button">
                             <div class="button-figure"><img class="button__image"
                                     src="assets/blocks/header/icons/chat.svg" alt="" />
                             </div>
@@ -101,12 +101,14 @@
                     </div>
                     <div class="header-menu-buttons">
                         <div class="header-menu__tablet-view">
-                            <button type="button" class="header__button button">
+                            <button type="button" class="header__button button" onclick="contactOverlay.showModal() "
+                                id="open-menu-button">
                                 <div class="button-figure"><img class="button__image"
                                         src="assets/blocks/header/icons/call.svg" alt="" />
                                 </div>
                             </button>
-                            <button type="button" class="header__button button">
+                            <button type="button" class="header__button button" onclick="feedbackOverlay.showModal()"
+                                id="open-menu-button">
                                 <div class="button-figure"><img class="button__image"
                                         src="assets/blocks/header/icons/chat.svg" alt="" />
                                 </div>
@@ -503,20 +505,20 @@
                 <div class="price-list__pagination"></div>
                 <p class="price-list__info">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
                     услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-                <a href="#" class="price-list__contact">
-                    <p class="contact-text">Получить коммерческое предложение</p> 
+                <button class="price-list__contact" onclick="contactOverlay.showModal()" id="open-menu-button">
+                    <p class="contact-text">Получить коммерческое предложение</p>
                     <img src="assets/blocks/price-list/icons/Line.svg" alt="">
-                </a>
+                </button>
             </div>
 
         </main>
 
-<footer class="footer">
-    <p class="footer__text">© 2019 CPS<br>
-        Разработано командой Apesong </p>
-    <a href="#" class="footer__link footer__text">Политика конфиденциальности</a>
-    <p class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</p>
-</footer>
+        <footer class="footer">
+            <p class="footer__text">© 2019 CPS<br>
+                Разработано командой Apesong </p>
+            <a href="#" class="footer__link footer__text">Политика конфиденциальности</a>
+            <p class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</p>
+        </footer>
 
     </div>
 
@@ -573,12 +575,12 @@
                 </div>
                 <div class="menu-overlay-footer">
                     <div class="menu-overlay-footer-buttons">
-                        <button class="menu-header__button button">
+                        <button class="menu-header__button button" onclick="contactOverlay.showModal()">
                             <div class="button-figure"><img class="button__image"
                                     src="assets/blocks/header/icons/call.svg" alt="" />
                             </div>
                         </button>
-                        <button class="menu-header__button button">
+                        <button class="menu-header__button button" onclick="feedbackOverlay.showModal()">
                             <div class="button-figure"><img class="button__image"
                                     src="assets/blocks/header/icons/chat.svg" alt="" />
                             </div>
@@ -604,6 +606,42 @@
             </div>
         </div>
     </dialog>
+
+    <dialog class="feedback-overlay" id="feedbackOverlay">
+
+        <div class="feedback-overlay__body">
+            <form action="" class="feedback-overlay__close-button-wrapper" method="dialog">
+                <button class="mobile-overlay__close-button menu-header__button button" type="submit"
+                    id="close-menu-button">
+                    <div class="button-figure"><img class="button__image" src="assets/blocks/header/icons/cancel.svg"
+                            alt="" />
+                    </div>
+                    <span class="visually-hidden">Close navigation menu</span>
+                </button>
+            </form>
+            <h2 class="feedback-overlay__heading">Обратная связь</h2>
+            <form class="feedback-overlay__form" id="feedback-form">
+                <label for="name" class="visually-hidden">Имя</label>
+                <input type="text" id="name" class="feedback-overlay__input" placeholder="Имя" />
+                <label for="name" class="visually-hidden">Телефон</label>
+                <input type="tel" id="tel" class="feedback-overlay__input" placeholder="Телефон" />
+                <label for="name" class="visually-hidden">Электронная почта</label>
+                <input type="email" id="email" class="feedback-overlay__input" placeholder="Электронная почта" />
+                <label for="name" class="visually-hidden">Сообщение</label>
+                <textarea name="message" id="message" placeholder="Сообщение"
+                    class="feedback-overlay__input feedback-overlay__message-input"></textarea>
+                <p class="feedback-overlay__text">Нажимая “отправить”, вы даете согласие на <a href=""
+                        class="feedback-overlay__link">обработку персональных данных</a> и соглашаетесь с нашей <a
+                        href="" class="feedback-overlay__link">политикой конфиденциальности</a></p>
+            </form>
+            <button class="feedback-overlay__button button">
+                <div class="price-slide__button-text">Заказать</div>
+                <div class="price-slide__button-figure">
+                    <img src="assets/blocks/price-list/icons/arrow.svg" alt="">
+            </button>
+        </div>
+    </dialog>
+    <dialog class="contact-overlay" id="contactOverlay"></dialog>
 </body>
 
 </html>

@@ -41,10 +41,12 @@
   }
 
   &__contact {
+    @include reset-button;
     display: inline-flex;
     flex-direction: row;
+    align-items: center;
 
-    @include reset-link;
+
     margin-left: 16px;
 
     @include hover {

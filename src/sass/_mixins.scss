@@ -49,3 +49,20 @@
   width: $size;
   aspect-ratio: 1;
 }
+
+@mixin reset-general {
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: auto;
+  vertical-align: middle; // IE6,IE7
+  white-space: normal;
+  line-height: inherit;
+  background: none;
+
+  /* Browsers have different default form fonts */
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
