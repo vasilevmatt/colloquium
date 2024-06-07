@@ -1,0 +1,144 @@
+.price-list {
+  position: relative;
+
+  &__swiper-wrapper {
+    display: flex;
+    overflow: visible;
+  }
+
+  &__desktop-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  &__header {
+    height: 55px;
+  }
+}
+
+.price-slide {
+  display: flex;
+  background-color: var(--color-slide);
+  min-width: 260px;
+  width: 260px;
+  min-height: 200px;
+  height: 200px;
+
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--price-list-border-radius);
+  padding: 16px;
+  max-height: 1300vh;
+
+  &--desktop {
+    min-width: 93.75vw;
+    min-height: 65px;
+    height: 65px;
+    border-radius: 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 89.5vw;
+      height: 1px;
+      background-color: var(--color-price-list-line);
+      position: absolute;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &--desktop {
+      min-width: 93.75vw;
+      display: grid;
+      grid-template-columns: 45.6vw 9.75vw 10.42vw 15.6vw;
+      grid-template-rows: 1fr;
+      column-gap: 3.125vw;
+    }
+  }
+
+  &__category {
+    color: var(--color-gray);
+
+    &--invisible {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+
+  &__price,
+  &__title {
+    margin-bottom: 16px;
+
+    &--desktop-view {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price,
+  &__title,
+  &__time {
+    &--desktop-view {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0;
+    align-self: self-end;
+
+    &--desktop-view {
+      position: static;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 119px;
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 16px 0 12px;
+
+    &-text {
+      font-weight: 700;
+      color: white;
+    }
+  }
+}
+
+.price-list::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -1.1vw;
+  height: 200px;
+  width: 24px;
+  background-image: -webkit-linear-gradient(
+    to right,
+    rgba(52, 73, 94, 0),
+    #f8f8f8
+  );
+  background-image: linear-gradient(to right, rgba(52, 73, 94, 0), #f8f8f8);
+  z-index: 10;
+}

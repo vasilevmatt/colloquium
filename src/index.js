@@ -14,9 +14,9 @@ import './index.scss'
 // first swiper
 
 let ButtonHidedSlides = document.querySelectorAll('#hidden-slide')
+let width = window.innerWidth
 
 document.addEventListener('DOMContentLoaded', () => {
-    const width = window.innerWidth
     if (width < 768) {
         for (let i = 0; i < ButtonHidedSlides.length; i++) {
             ButtonHidedSlides[i].classList.remove('brand-slide--invisible')
@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
 let ButtonHidedServiceSlides = document.querySelectorAll('#hidden-service-slide')
 
 document.addEventListener('DOMContentLoaded', () => {
-    const width = window.innerWidth
     if (width < 768) {
         for (let i = 0; i < ButtonHidedServiceSlides.length; i++) {
             ButtonHidedServiceSlides[i].classList.remove('service-slide--invisible')
@@ -202,14 +201,84 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
+// price list swiper
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (width < 768) {
+        new Swiper('.price-list', {
+            slideClass: 'price-slide',
+            wrapperClass: 'price-list__swiper-wrapper',
+            modules: [Pagination],
+            pagination: {
+                el: '.price-list__pagination',
+                clickable: true,
+            },
+            grabCursor: true,
+            slideToClickedSlide: true,
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            freeMode: true,
+
+            a11y: {
+                enabled: true
+            }
+        });
+    } else {
+
+        // adding desktop classes for a price list wrapper
+
+        let priceListWrapper = document.querySelector('.price-list__swiper-wrapper')
+        priceListWrapper.classList.remove('price-list__swiper-wrapper')
+        priceListWrapper.classList.add('price-list__desktop-wrapper')
+
+        // BEM modifications for a table view
+
+        let priceSlide = document.querySelectorAll('.price-slide')
+        let priceListSlideWrapper = document.querySelectorAll('.price-slide-wrapper')
+        for (let i = 0; i < priceListSlideWrapper.length; i++) {
+            priceSlide[i].classList.add('price-slide--desktop')
+            priceListSlideWrapper[i].classList.add('price-slide-wrapper--desktop')
+        }
+
+        // Hiding slides' category names in rows
+
+        let priceSlideCategories = document.querySelectorAll('.price-slide__category')
+        for (let i = 0; i < priceSlideCategories.length; i++) {
+            priceSlideCategories[i].classList.add('price-slide__category--invisible')
+        }
+
+        // Button positioning 
+
+        let priceSlideButton = document.querySelectorAll('.price-slide__button')
+        for (let i = 0; i < priceSlideButton.length; i++) {
+            priceSlideButton[i].classList.add('price-slide__button--desktop-view')
+        }
+
+        // Aligning text in rows
+
+        let priceSlidePrice = document.querySelectorAll('.price-slide__price')
+        let priceSlideTitle = document.querySelectorAll('.price-slide__title')
+        let priceSlideTime = document.querySelectorAll('.price-slide__time')
+        for (let i = 0; i < priceSlidePrice.length; i++) {
+            priceSlidePrice[i].classList.add('price-slide__price--desktop-view')
+            priceSlideTitle[i].classList.add('price-slide__title--desktop-view')
+            priceSlideTime[i].classList.add('price-slide__time--desktop-view')
+        }
+    }
+})
+
+
+
+
+
 
 
 /* when menu is opened */
-document.querySelector("#open-menu-button").addEventListener('click', function() {
+document.querySelector("#open-menu-button").addEventListener('click', function () {
     document.querySelector("body").style.overflow = 'hidden';
 });
 
 /* when menu is closed */
-document.querySelector("#close-menu-button").addEventListener('click', function() {
+document.querySelector("#close-menu-button").addEventListener('click', function () {
     document.querySelector("body").style.overflow = 'visible';
 });
