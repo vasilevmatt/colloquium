@@ -11,6 +11,26 @@ import 'swiper/css/pagination';
 import './index.scss'
 
 
+// menu overlay and desktop menu bar buttons
+
+let burgerButton = document.querySelector('.header__burger')
+let burgerMenu = document.querySelector('.menu')
+burgerButton.addEventListener('click', function () {
+    burgerMenu.classList.add('menu--visible')
+})
+
+let burgerMenuCloseButton = document.querySelector('.menu__close-button')
+burgerMenuCloseButton.addEventListener('click', function () {
+    burgerMenu.classList.remove('menu--visible')
+})
+
+// menu's backdrop is clickable 
+
+let burgerBackdrop = document.querySelector('.menu__backdrop')
+burgerBackdrop.addEventListener('click', function () {
+    burgerMenu.classList.remove('menu--visible')
+})
+
 // first swiper
 
 let ButtonHidedSlides = document.querySelectorAll('#hidden-slide')
@@ -286,6 +306,8 @@ document.querySelectorAll("#open-menu-button").forEach((button) => {
 /* when menu is closed */
 document.querySelectorAll("#close-menu-button").forEach((button) => {
     button.addEventListener('click', function () {
-        document.querySelector("body").style.overflow = 'visible';
+        if (!burgerMenu.classList.contains('menu--visible')) { 
+            document.querySelector("body").style.overflow = 'visible'; 
+        }
     })
 })

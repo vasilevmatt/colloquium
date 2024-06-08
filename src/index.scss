@@ -7,13 +7,11 @@
 
 @import 'sass/globals';
 
-@import 'sass/blocks/menu-overlay';
+@import 'sass/blocks/menu';
 @import 'sass/blocks/header'; 
 @import 'sass/blocks/links-line';
 @import 'sass/blocks/article';
 @import 'sass/blocks/swiper';
-@import 'sass/blocks/desktop-menu';
 @import 'sass/blocks/price-list';
 @import 'sass/blocks/footer';
-@import 'sass/blocks/feedback-overlay';
-@import 'sass/blocks/contact-overlay'
+@import 'sass/blocks/button-overlays';

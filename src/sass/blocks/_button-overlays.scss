@@ -1,4 +1,4 @@
-.feedback-overlay {
+.button-overlay {
 
 
     width: 100%;
@@ -8,6 +8,7 @@
     padding: 0;
     background-color: transparent;
     position: relative;
+
 
     &__body {
         width: clamp(320px, 100vw, 440px);
@@ -67,6 +68,11 @@
     border-radius: 8px;
     border: var(--input-border);
     padding-left: 16px;
+
+    &:focus {
+        border: 0;
+        outline: var(--input-outline-focus);
+    }
 
     &::placeholder {
     color: var(--color-input-placeholder);

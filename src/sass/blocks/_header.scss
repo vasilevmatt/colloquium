@@ -52,28 +52,6 @@
     left: -12px;
 }
 
-.button,
-.header__burger {
-    background-color: var(--color-pink);
-    display: block;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-
-}
-
-.header__button, .header__burger {
-    margin: 23px clamp(7px, 2.45vw, 8px);
-}
-
-.button-figure {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-}
-
 .header-menu__right {
     @media (min-width: $desktop) {
         position: absolute;
@@ -83,20 +61,6 @@
 
 }
 
-.button__image {
-   max-width: 20px;
-   max-height: 20px;
-}
-
-.button__text {
-    display: none;
-}
-
-button:hover,
-.header__burger:hover {
-    opacity: 0.9;
-    transition-duration: var(--transition-duration);
-}
 
 .header__logo {
     margin: 19px 16px 19px 16px;
