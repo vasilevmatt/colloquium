@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* when menu is opened */
 document.querySelectorAll("#open-menu-button").forEach((button) => {
     button.addEventListener('click', function () {
-        document.querySelector("body").style.overflow = 'hidden';
+        document.querySelector("body").style.overflowY = 'hidden';
     })
 })
 
@@ -307,7 +307,7 @@ document.querySelectorAll("#open-menu-button").forEach((button) => {
 document.querySelectorAll("#close-menu-button").forEach((button) => {
     button.addEventListener('click', function () {
         if (!burgerMenu.classList.contains('menu--visible')) { 
-            document.querySelector("body").style.overflow = 'visible'; 
+            document.querySelector("body").style.overflowY = 'visible'; 
         }
     })
 })

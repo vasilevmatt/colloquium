@@ -1,15 +1,18 @@
 .menu {
   display: none;
+  overflow-x: hidden;
 
   &--visible {
     display: grid;
     grid-template-columns: auto 1fr;
     position: absolute;
     z-index: 20;
+    overflow-x: hidden;
   }
 
   &__body {
     position: absolute;
+    overflow-x: hidden;
 
     &::after {
       content: '';
